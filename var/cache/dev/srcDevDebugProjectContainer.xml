@@ -20,6 +20,7 @@
       <parameter key="HttplugBundle">Http\HttplugBundle\HttplugBundle</parameter>
       <parameter key="NexySlackBundle">Nexy\SlackBundle\NexySlackBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
+      <parameter key="KnpULoremIpsumBundle">KnpU\LoremIpsumBundle\KnpULoremIpsumBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -65,6 +66,10 @@
       <parameter key="MakerBundle" type="collection">
         <parameter key="path">/var/www/html/symfony/symf-bundle/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
+      </parameter>
+      <parameter key="KnpULoremIpsumBundle" type="collection">
+        <parameter key="path">/var/www/html/symfony/symf-bundle/lib/LoremIpsumBundle/src</parameter>
+        <parameter key="namespace">KnpU\LoremIpsumBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -217,7 +222,7 @@
       <tag name="container.service_subscriber"/>
       <tag name="container.service_subscriber.locator" id="service_locator.aqxUcvZ.App\Controller\ArticleController"/>
       <argument>true</argument>
-      <argument type="service" id="KnpU\LoremIpsumBundle\KnpUIpsum"/>
+      <argument type="service" id="knpu_lorem_ipsum.knpu_ipsum"/>
       <call method="setContainer">
         <argument type="service" id="service_locator.aqxUcvZ.App\Controller\ArticleController"/>
       </call>
@@ -236,7 +241,6 @@
         <argument type="service" id="monolog.logger"/>
       </call>
     </service>
-    <service id="KnpU\LoremIpsumBundle\KnpUIpsum" class="KnpU\LoremIpsumBundle\KnpUIpsum" public="false" autowire="true" autoconfigure="true"/>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -2073,6 +2077,7 @@
       <tag name="maker.command"/>
       <argument>/var/www/html/symfony/symf-bundle</argument>
     </service>
+    <service id="knpu_lorem_ipsum.knpu_ipsum" class="KnpU\LoremIpsumBundle\KnpUIpsum" public="true"/>
     <service id="instanceof.Symfony\Component\Console\Command\Command.0.App\Command\ArticleStatsCommand" class="App\Command\ArticleStatsCommand" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Command\ArticleStatsCommand" class="App\Command\ArticleStatsCommand" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\DependencyInjection\ServiceSubscriberInterface.0.App\Controller\ArticleController" class="App\Controller\ArticleController" public="false" autowire="true" abstract="true"/>
@@ -2578,6 +2583,7 @@
     <service id="httplug.stream_factory" alias="httplug.stream_factory.default" public="true"/>
     <service id="httplug.client.default" alias="httplug.client.app.http_methods"/>
     <service id="nexy_slack.http.client" alias="httplug.client.app.http_methods" public="false"/>
+    <service id="KnpU\LoremIpsumBundle\KnpUIpsum" alias="knpu_lorem_ipsum.knpu_ipsum" public="false"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="service_locator.FaDxC1e" alias="2_ServiceLocator~GZUUUI0" public="false"/>
