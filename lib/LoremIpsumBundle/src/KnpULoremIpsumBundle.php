@@ -11,11 +11,10 @@ class KnpULoremIpsumBundle extends Bundle
 {
     public function getContainerExtension()
     {
-        if(null == $this->extension){
+        if (null === $this->extension) {
             $this->extension = new KnpULoremIpsumExtension();
         }
         return $this->extension;
     }
-
 
 }
