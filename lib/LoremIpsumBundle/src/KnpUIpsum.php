@@ -2,6 +2,8 @@
 
 namespace KnpU\LoremIpsumBundle;
 
+use App\WordProviderInterface;
+
 /**
  * Generate random "lorem ipsum" text KnpUniversity style!
  *
@@ -13,7 +15,7 @@ class KnpUIpsum {
 
 	private $minSunshine;
 
-	public function __construct(KnpWordProvider $wordProvider,bool $unicornsAreReal = true, $minSunshine = 3) {
+	public function __construct(WordProviderInterface $wordProvider,bool $unicornsAreReal = true, $minSunshine = 3) {
         $this->wordProvider = $wordProvider;
 		$this->unicornsAreReal = $unicornsAreReal;
 		$this->minSunshine = $minSunshine;

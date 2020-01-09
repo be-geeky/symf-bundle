@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c7110b6-e1c5-4698-a1bd-0d4746db282c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/KnpWordProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WordProviderInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/knpu_lorem_ipsum.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/knpu_lorem_ipsum.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/DependencyInjection/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/DependencyInjection/Configuration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/DependencyInjection/KnpULoremIpsumExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/DependencyInjection/KnpULoremIpsumExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/KnpUIpsum.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/KnpUIpsum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/KnpWordProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/KnpWordProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/Resources/config/services.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LoremIpsumBundle/src/Resources/config/services.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/CustomWordProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CustomWordProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +135,8 @@
       <option name="presentableId" value="Default" />
       <updated>1578482918395</updated>
       <workItem from="1578482920158" duration="5029000" />
-      <workItem from="1578558564072" duration="7389000" />
+      <workItem from="1578558564072" duration="8152000" />
+      <workItem from="1578569339910" duration="1407000" />
     </task>
     <servers />
   </component>
@@ -148,6 +149,10 @@
     </state>
     <state x="749" y="226" width="412" height="625" key="#com.intellij.ide.util.MemberChooser/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578567144795" />
     <state x="790" y="173" width="412" height="665" key="#com.intellij.ide.util.MemberChooser/1920.62.1920.1080/67.27.1853.1053@67.27.1853.1053" timestamp="1578490267343" />
+    <state x="643" y="267" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578569316124">
+      <screen x="0" y="89" width="1920" height="991" />
+    </state>
+    <state x="643" y="267" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578569316124" />
     <state x="677" y="78" width="545" height="921" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578484339039">
       <screen x="0" y="89" width="1920" height="991" />
     </state>
@@ -160,23 +165,23 @@
       <screen x="1920" y="62" width="1920" height="1080" />
     </state>
     <state x="2663" y="360" width="424" height="484" key="FileChooserDialogImpl/1920.62.1920.1080/0.89.1920.991@1920.62.1920.1080" timestamp="1578482977206" />
-    <state x="630" y="352" width="809" height="373" key="NewPhpClassDialog" timestamp="1578567116844">
+    <state x="630" y="352" width="809" height="373" key="NewPhpClassDialog" timestamp="1578570480337">
       <screen x="0" y="89" width="1920" height="991" />
     </state>
-    <state x="630" y="352" width="809" height="373" key="NewPhpClassDialog/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578567116844" />
+    <state x="630" y="352" width="809" height="373" key="NewPhpClassDialog/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578570480337" />
     <state x="449" y="250" key="SettingsEditor" timestamp="1578559558921">
       <screen x="0" y="89" width="1920" height="991" />
     </state>
     <state x="449" y="250" key="SettingsEditor/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578559558921" />
     <state x="2369" y="237" key="SettingsEditor/1920.62.1920.1080/0.89.1920.991@1920.62.1920.1080" timestamp="1578482990864" />
-    <state x="616" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1578558566472">
+    <state x="616" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1578569348726">
       <screen x="0" y="89" width="1920" height="991" />
     </state>
-    <state x="616" y="366" key="com.intellij.ide.util.TipDialog/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578558566472" />
-    <state x="605" y="137" width="709" height="804" key="find.popup" timestamp="1578559564877">
+    <state x="616" y="366" key="com.intellij.ide.util.TipDialog/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578569348726" />
+    <state x="605" y="137" width="709" height="804" key="find.popup" timestamp="1578569884331">
       <screen x="0" y="89" width="1920" height="991" />
     </state>
-    <state x="605" y="137" width="709" height="804" key="find.popup/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578559564877" />
+    <state x="605" y="137" width="709" height="804" key="find.popup/1920.62.1920.1080/0.89.1920.991@0.89.1920.991" timestamp="1578569884331" />
     <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1578567251363">
       <screen x="0" y="89" width="1920" height="991" />
     </state>
